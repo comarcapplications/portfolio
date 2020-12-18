@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;500;800&family=Pacifico&family=Roboto&family=Russo+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/utilities.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Desarrollo de Software</title>
+</head>
+
+<body id="home">
+    <!--Header-->
+    <header class="hero soluciones">
+        <div id="navbar" class="navbar top">
+            <ul>
+                <!--Links del Navbar-->
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="soluciones.html">Soluciones</a></li>
+                <li><a href="#home">Desarrollo de software</a></li>
+                <li><a href="index.html">Inicio</a></li>
+            </ul>
+        </div>
+
+        <div class="contenido">
+            <h1>Desarrollo de software</h1>
+
+        </div>
+    </header>
+
+    <main>
+        <section class="soluciones">
+            <h2>Desarrollo de software # 1</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, qui?
+            </p>
+
+            <img src="/imagenes/home/jungle.jpg" alt="">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam officiis adipisci recusandae aut sequi, quam, est ex aliquid odio minima dolor, neque velit at modi ullam error? Commodi, iure obcaecati?</p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur distinctio earum hic saepe consectetur? Minus facere eveniet culpa quibusdam iste sed ipsum quaerat quod dolore odit doloribus maxime explicabo tenetur consequuntur rem consequatur
+                quas quam dolorem vero, tempore molestias laboriosam voluptatum nihil molestiae. Natus possimus velit ut corporis, reprehenderit cum.
+            </p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam officiis adipisci recusandae aut sequi, quam, est ex aliquid odio minima dolor, neque velit at modi ullam error? Commodi, iure obcaecati?</p>
+        </section>
+
+        <!--Contacto-->
+        <section id="contacto" class="contacto flex-columns">
+            <div class="row">
+                <div class="column">
+                    <div class="column-1">
+                        <img src="imagenes/home/Room20 (Camera01)0000.png" alt="">
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="column-2 fondo-primario">
+                        <h2>¿Quieres que te contacte de vuelta?</h2>
+                        <form action="" class="llamadaDeVuelta-formulario">
+                            <div class="formulario-control">
+                                <label for="name"></label>
+                                <input type="text" name="name" id="name" placeholder="Ingrese nombre">
+                            </div>
+                            <div class="formulario-control">
+                                <label for="email"></label>
+                                <input type="email" name="name" id="email" placeholder="Ingrese email">
+                            </div>
+                            <div class="formulario-control">
+                                <label for="móvil"></label>
+                                <input type="text" name="phone" id="phone" placeholder="Ingrese móvil">
+                            </div>
+                            <input type="submit" value="Send" id="submit" class="boton-contacto">
+                        </form>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <footer class="footer fondo-oscuro">
+        <div class="social">
+            <a href="https://www.facebook.com/karlsour/"><i class="fab fa-facebook fa-2x"></i></a>
+            <a href="https://www.instagram.com/camilo_suarez_giraldo/"><i class="fab fa-instagram fa-2x"></i></a>
+            <a href="https://www.youtube.com/channel/UCmEiuy8WTXIExTc7JreRSCg"><i class="fab fa-youtube fa-2x"></i></a>
+            <a href="https://www.linkedin.com/in/camilo-alfredo-suarez-giraldo-11a7b41ab/"><i class="fab fa-linkedin fa-2x"></i></a>
+        </div>
+        <p>Copyright &copy; 2020 - KS</p>
+    </footer>
+    <script>
+        const navbar = document.getElementById('navbar');
+        let scrolled = false;
+
+        window.onscroll = function() {
+            if (window.pageYOffset > 100) {
+                navbar.classList.remove('top');
+                if (!scrolled) {
+                    navbar.style.transform = 'translateY(-70px)';
+                }
+                setTimeout(function() {
+                    navbar.style.transform = 'translateY(0)';
+                    scrolled = true;
+                }, 200);
+            } else {
+                navbar.classList.add('top');
+                scrolled = false;
+            }
+        };
+    </script>
+</body>
+
+</html>

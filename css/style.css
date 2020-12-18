@@ -1,0 +1,271 @@
+/*Estilos globales */
+
+
+/*Fuentes*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&family=Russo+One&display=swap');
+
+/* Estilos base */
+
+* {
+    /* incluye el relleno y el borde en el ancho y alto total de un elemento.*/
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Russo One';
+    background: #333;
+    color: #ed1c24;
+    /*Establezca la altura de la línea para diferentes elementos*/
+    line-height: 1.6;
+}
+
+ul {
+    list-style: none;
+}
+
+
+/*Estilos a los links */
+
+a {
+    color: #ED1C24;
+    text-decoration: none;
+}
+
+h1,
+h2 {
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+p {
+    margin: 10px 0;
+}
+
+img {
+    width: 100%;
+}
+
+
+/* Navbar */
+
+.navbar {
+    /*todos los elementos flexibles tengan la misma longitud, 
+    independientemente de su contenido*/
+    display: flex;
+    align-items: center;
+    background-color: rgba(51, 51, 51, 0.123);
+    color: rgba(255, 255, 255, 0.082);
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    top: 0;
+    padding: 0 30px;
+    transition: 0.5s;
+}
+
+.navbar.superior {
+    background: transparent;
+}
+
+.navbar a {
+    color: #ED1C24;
+    padding: 10px 20px;
+    margin: 0 5px;
+}
+
+.navbar a:hover {
+    border-bottom: #ED1C24 2px solid;
+}
+
+.navbar ul {
+    display: flex;
+}
+
+
+/* Header */
+
+.hero {
+    background: url('../imagenes/background/background.png') no-repeat center center/cover;
+    height: 100vh;
+    position: relative;
+    color: #ED1C24;
+}
+
+.hero .contenido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    padding: 0 20px;
+}
+
+.hero .contenido h1 {
+    font-size: 55px;
+}
+
+.hero .contenido p {
+    font-size: 17px;
+    max-width: 600px;
+    margin: 20px 0 30px;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.hero * {
+    z-index: 10;
+}
+
+.hero.soluciones {
+    background: url("../imagenes/home/bodegon.jpg") no-repeat center center/cover;
+    height: 100vh;
+}
+
+
+/* Iconos */
+
+.iconos {
+    padding: 30px;
+}
+
+.iconos h3 {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.iconos i {
+    background-color: #fff;
+    color: #ED1C24;
+    padding: 1rem;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.galeria img:hover {
+    opacity: 0.7;
+}
+
+
+/*llamadaDeVuelta formulario*/
+
+.llamadaDeVuelta-formulario {
+    width: 100%;
+    padding: 20px 0;
+}
+
+.llamadaDeVuelta-formulario label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.llamadaDeVuelta-formulario .formulario-control {
+    margin-bottom: 15px;
+}
+
+.llamadaDeVuelta-formulario input {
+    width: 100%;
+    padding: 4px;
+    height: 60px;
+    border: #F4F4F4 10px solid;
+}
+
+.llamadaDeVuelta-formulario input:focus {
+    outline-color: rgb(1, 38, 248);
+}
+
+.llamadaDeVuelta-formulario .boton {
+    padding: 12px;
+    margin-top: 20px;
+}
+
+
+/* Soluciones*/
+
+.soluciones {
+    padding: 50px 30px;
+}
+
+.soluciones h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: #ED1C24 solid 1px;
+}
+
+.soluciones .meta {
+    margin-bottom: 30px;
+}
+
+.soluciones img {
+    display: block;
+}
+
+
+/* Footer */
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 250px;
+}
+
+.footer a {
+    color: #fff;
+}
+
+.footer a {
+    color: #fff;
+}
+
+.footer a:hover {
+    color: #ED1C24;
+}
+
+.footer .home a:hover {
+    color: #333;
+}
+
+.footer .social * {
+    margin-right: 30px;
+}
+
+
+/* Smartphone*/
+
+@media(max-width:768px) {
+    .navbar {
+        flex-direction: column;
+        height: 120px;
+        padding: 0px;
+    }
+    .navbar a {
+        padding: 10px 10px;
+        margin: 0 3px;
+    }
+    .flex-items {
+        flex-direction: column;
+    }
+    .flex-columns .column,
+    .flex-grid .column {
+        flex: 100%;
+        max-width: 100%;
+    }
+    .team img {
+        /* width: 50%;*/
+    }
+}
